@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: manualtest-codegenllamacpp-nov5 
+  description: Secure Supply Chain Example for Code Generation Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=manualtest-codegenllamacpp-nov5  
+    janus-idp.io/tekton: manualtest-codegenllamacpp-nov5 
+    backstage.io/kubernetes-id: manualtest-codegenllamacpp-nov5 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jdubrick-ai/manualtest-codegenllamacpp-nov5
+  tags: ["ai", "llamacpp", "vllm", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
